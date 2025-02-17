@@ -26,7 +26,7 @@ The variant calling analysis successfully identified a high proportion of SNPs c
 The chromosome-wide distribution suggests that all variations belong to a single reference sequence (AE005672.3).
 Further downstream analysis, such as functional annotation, could provide insights into the biological significance of these variants.
 
-# Repository Contents
+# File Contents
 VCF.vcf: Original VCF file with raw variant data
 filtered_variants.vcf:	Processed VCF file with only SNPs & INDELs
 variants.tsv:	Tab-separated file with variant information
