@@ -17,7 +17,6 @@ To gain hands-on familiarity with:
 - **Python (pandas)** for variant parsing and summary statistics  
 
 ### Commands Used
-See `/commands/bcftools_workflow.txt` for the exact bcftools/vcftools steps.  
 Python script is available under `/scripts/variant_analysis.py`.
 
 ### Key Summary (Based on Original Analysis)
