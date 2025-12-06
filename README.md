@@ -1,36 +1,35 @@
-# Variant Calling Analysis - SNPs & INDELs Identification
+# Variant Filtering & Summary Analysis (bcftools, vcftools, Python)
 
-## Introduction 
-This repository contains the variant calling analysis performed on a VCF file (VCF.vcf). The analysis includes filtering variants, extracting SNPs & INDELs, and summarizing the key findings. The results provide insights into genetic variations such as Single Nucleotide Polymorphisms (SNPs) and Insertions/Deletions (INDELs).
+### Overview
+This repository contains an early learning exercise focused on understanding variant filtering workflows using bcftools, vcftools, and Python.  
+The analysis involved processing a provided VCF file to extract SNPs and INDELs, generate summary statistics, and produce structured TSV outputs.
 
+### Objective
+To gain hands-on familiarity with:
+- Inspecting and filtering VCF files  
+- Extracting SNPs and INDELs  
+- Parsing variant data using Python  
+- Generating summary metrics for downstream interpretation  
 
-## Commands Used for Variant Processing 
+### Tools & Skills Demonstrated
+- **bcftools** for viewing and filtering variants  
+- **vcftools** for SNP/INDEL extraction and genotype information  
+- **Python (pandas)** for variant parsing and summary statistics  
 
-### 1. View and Filter Variants  
-# View the VCF file in a readable format
-bcftools view VCF.vcf | less -S
+### Commands Used
+See `/commands/bcftools_workflow.txt` for the exact bcftools/vcftools steps.  
+Python script is available under `/scripts/variant_analysis.py`.
 
-# Extract only SNPs and INDELs from the VCF file
-bcftools view -v snps,indels -O v -o filtered_variants.vcf VCF.vcf
+### Key Summary (Based on Original Analysis)
+- Total variants processed: ~1.96M  
+- SNPs identified: ~1.96M (≈99.96%)  
+- INDELs identified: ~728 (≈0.04%)  
+- All variants mapped to reference sequence **AE005672.3**
 
-# Key Findings
-1. Total Variants Identified
-Total Variants: 1,964,791
-2. Classification of Variants
-SNPs Identified: 1,964,063 (99.96% of total variants)
-INDELs Identified: 728 (0.04% of total variants)
-3. Chromosome-Wise Variant Distribution
-All 1,964,791 variants were found on AE005672.3, indicating a single reference sequence.
-Conclusion
-The variant calling analysis successfully identified a high proportion of SNPs compared to INDELs.
-The chromosome-wide distribution suggests that all variations belong to a single reference sequence (AE005672.3).
-Further downstream analysis, such as functional annotation, could provide insights into the biological significance of these variants.
+*(Original input data not included to keep the repository lightweight.)*
 
-# File Contents
-VCF.vcf: Original VCF file with raw variant data
-filtered_variants.vcf:	Processed VCF file with only SNPs & INDELs
-variants.tsv:	Tab-separated file with variant information
-SNPs.tsv:	SNPs extracted from the VCF file
-INDELs.tsv:	INDELs extracted from the VCF file
-genotypes.FORMAT:	Extracted genotype information
+### Status
+**Archived learning project — no further updates planned.**  
+Kept as part of my bioinformatics learning record.
+
 
